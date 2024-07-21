@@ -119,3 +119,47 @@ console.log(leapYearBirthday(70));
 console.log(leapYearBirthday(80));
 console.log(leapYearBirthday(90));
 console.log(leapYearBirthday(100));
+
+//If a number is autobiographical, then the number's digits describe itself.
+//The first digit is the amount of times the digit 0 appears, the second digit is the amount of times the digit 1 appears, the third digit is the amount of times the digit 2 appears, etc.
+//This repeats for all digits of the number. The number 6210001000 is autobiographical, because it has six 0's, two 1's, one 2, zero 3's, zero 4's, zero 5's, one 6, zero 7's, zero 8's, and zero 9's.
+//Create a function that takes an integer n and returns whether or not n is an autobiographical number.
+//Examples
+//isAutobiographical(6210001000) ➞ true
+//isAutobiographical(12345) ➞ false
+//isAutobiographical(1210) ➞ true
+// one 0, two 1's, one 2, zero 3's
+//isAutobiographical(638) ➞ false
+//isAutobiographical(0) ➞ false
+// claims no zeroes, however zero is the first digit
+//Notes
+//Numbers with more than 10 digits should always return false (9 is the highest digit in base 10, so you can't go higher than 9,999,999,999).
+//n is always >= 0 and is always an integer.
+
+//steps to be followed
+
+//1.declare the function that takes the integer
+//2.convert the integer into a string to access all the digits
+//3.store the values of each digit that was converted into a string(variable)
+//4.inside the function state the requirements of an autobiographical no.()
+//5.initiallise an array to count the occurence of every digit (9)
+//6.use a loop,(length of array)  -will compare  the string to the array created
+//7. (boolean)-if it passes the test returns true ...if not it returns false
+//8.call the function
+
+function isAutobiographical(y) {
+  //Defining the function which takes the integer 'y'
+  if (y.toString().length > 10) return false;
+
+  // it checks if the number of digits in 'y' is greater than 10 and if it is...it returns false because its not autobiographical
+  const digits = new Array(10).fill(0);
+  // we have created an array called 'digit' and initialized it with
+  //'const digit'which is declaring the variable digit (hold the array we created)
+  // and 'new Array(10)' which is creating an array with 10 elements
+  //'fill' . The fill method is used to fill all the elements of the array with a specific value. Here, 0 is passed as the argument,
+  // so all ten elements of the array will be filled with the number zero.
+  console.log(digits);
+  //while (y > 0) {
+  //it works as long as no. is greater than 0
+}
+//}
